@@ -24,10 +24,6 @@
 - создаем ресурс для возврата данных в виде массива (не обязательно)
 - php artisan make:resource
 
-## Routes
-
-- все маршруты находятся в папке routes/api.php
-
 ## Работа с Api
     'headers' => [
         'Accept' => 'application/json',
@@ -37,3 +33,15 @@
 - маршрут регистрации api/register
 - в запросах отправляем Bearer token с accept application/json
 
+## Конфигурация
+- Все контроллеры api находятся в папке app/Controllers/Api
+- Все ресурсы для изменения вида response находятся в папке app/Resources
+- маршруты находятся в папке routes/api.php
+
+## Развертывание
+
+- после git clone выполняем команду ```bash composer install ```
+- в файле .env.example убираем .example
+- настраиваем подключение к базе данных в файле .env
+- для созданий таблиц выполняем команду ```bash php artisan migrate ```
+- наслаждаемся.
